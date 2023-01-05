@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .board {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  
+  .board button {
+    background: #FFF;
+    width: 150px;
+    height: 150px;
+    margin: 5px;
+    font-size: 100px;
+    color: #011b54;
+    box-shadow: 3px 3px 5px;
+    cursor: pointer;
+  }
