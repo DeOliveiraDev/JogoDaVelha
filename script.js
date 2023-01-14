@@ -44,10 +44,6 @@ function winnerCondictions(playerPlays, player) {
     }
 }
 
-function winnerVerify(playerPlays, player) {
-        winnerCondictions(playerPlays, player)
-}
-
 function newMove(event) {
     if(lastPlayer) {
         if(lastPlayer === "X") {
@@ -55,13 +51,13 @@ function newMove(event) {
             lastPlayer = "O"
             playerOPlays.push(parseInt(event.srcElement.className))
             plays.push(parseInt(event.srcElement.className))
-            winnerVerify(playerOPlays, playerO)
+            winnerCondictions(playerOPlays, playerO)
         } else if(lastPlayer === "O") {
             event.target.innerHTML = "X"
             lastPlayer = "X"
             playerXPlays.push(parseInt(event.srcElement.className))
             plays.push(parseInt(event.srcElement.className))
-            winnerVerify(playerXPlays, playerX)
+            winnerCondictions(playerXPlays, playerX)
 
         }
     } else {
